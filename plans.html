@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plans</title>
+</head>
+<body>
+    {% extends 'meal_plans/base.html' %}
+    {% block content%}
+      <ul>
+        {% for plan in plans %}
+        <li>
+          <a href="{% url 'meal_plans:plan' plan.id %}">{{ plan.text }}</a>
+        </li>
+        {% empty %}
+        <li> no datas </li>
+        {% endfor %}
+      </ul>
+    {% endblock content%}
+</body>
+</html>

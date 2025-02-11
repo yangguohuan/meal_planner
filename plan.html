@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plan</title>
+</head>
+<body>
+    {% extends 'meal_plans/base.html' %}
+    {% block content %}
+      <ul>
+        <li>{{ plan.text }}</li>
+        {% for t in text %}
+        <li>
+          <p>{{ t.data_added }}</p>
+          <p>{{ t.text }}</p>
+        </li>
+        {% empty %}
+        <li>no datas </li>
+        {% endfor %}
+      </ul>
+    {% endblock %}
+</body>
+</html>

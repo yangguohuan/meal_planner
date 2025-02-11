@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+    <p>
+      <a href="{% url 'meal_plans:index' %}"> meal plans </a>
+      <a href="{% url 'meal_plans:plans' %}"> plans </a>
+    </p>
+    {% block content%}{% endblock content %}
+</body>
+</html>
